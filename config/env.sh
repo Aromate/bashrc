@@ -15,6 +15,9 @@ export GOPATH=$HOME/.go
 export PYENV_ROOT=$HOME/.pyenv
 export GO_BIN=$HOME/.local/bin
 export RUST_BIN=$HOME/.cargo/bin
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 _add_to_path_env $HOME/depot_tools
 _add_to_path_env $GOPATH/bin
