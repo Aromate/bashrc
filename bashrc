@@ -12,3 +12,14 @@ if [[ "${BLE_VERSION}" == "" || ${__debug} == "true" ]]; then
 fi
 
 source $HOME/.local/share/blesh/ble.sh
+
+if [[ ! -z "$hacknet" ]]; then
+	export PS1="\[\033[31m\]Scope \u\[\033[01;34m\]@\h\[\033[01;34m\] \w \$\[\033[00m\] "
+  unset http_proxy
+  unset https_proxy
+  unset all_proxy
+fi
+
+if [[ -z "$IS_VIM" ]]; then
+  eval "$(starship init bash)"
+fi
