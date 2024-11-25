@@ -4,7 +4,7 @@ if [[ $(which ${lxc_cmd}) == "" ]]; then
   return
 fi
 
-if [[ ! -f /var/lib/incus/unix.socket ]]; then
+if [[ $(incus 1>/dev/null 2>&1) ]]; then
   return
 fi
 
